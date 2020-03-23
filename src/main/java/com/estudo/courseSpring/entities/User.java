@@ -29,7 +29,7 @@ public class User implements Serializable{
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "client")
-	private List<Order> orders = new ArrayList<Order>();
+	private List<Order> orders = new ArrayList<>();
 	
 	public User() {
 	}
@@ -42,11 +42,11 @@ public class User implements Serializable{
 		this.password = password;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -84,7 +84,7 @@ public class User implements Serializable{
 
 	public List<Order> getOrders() {
 		return orders;
-	}	
+	}
 	
 	@Override
 	public int hashCode() {
